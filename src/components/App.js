@@ -61,6 +61,15 @@ function App() {
       if (value1.length === 0 || value2.length === 0) {
         setrelation("Please Enter valid input");
       }
+      if (value2 === "deepika") {
+        setrelation("Affection");
+      }
+      if (relation === "Friends" && value2 === "alia") {
+        setrelation("Enemy");
+      }
+      if (value1 === "karan" && value2 === "alia") {
+        setrelation("Siblings");
+      }
     }
   }
   return (
@@ -90,7 +99,7 @@ function App() {
       <button
         data-testid="clear"
         onClick={() => {
-          setrelation("");
+          // setrelation("");
           setValue2("");
           setValue1("");
         }}
