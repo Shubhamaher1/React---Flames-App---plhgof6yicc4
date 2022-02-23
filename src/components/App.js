@@ -91,6 +91,8 @@ function App() {
         data-testid="clear"
         onClick={() => {
           setrelation("");
+          setValue2("");
+          setValue1("");
         }}
       >
         {" "}
