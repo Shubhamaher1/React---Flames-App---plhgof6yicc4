@@ -32,6 +32,7 @@ function App() {
       <input
         type="text"
         placeholder="enter first name "
+        data-testid="input1"
         value={value1}
         onChange={(e) => {
           setValue1(e.target.value);
@@ -40,13 +41,25 @@ function App() {
       <input
         type="text"
         placeholder="enter second name"
+        data-testid="input2"
         value={value2}
         onChange={(e) => {
           setValue2(e.target.value);
         }}
       />
-      <button onClick={clickHandeler}>Calculation RelationShip Future</button>
-      <h3>{relation}</h3>
+      <button onClick={clickHandeler} data-testid="calculate_relationship">
+        Calculation RelationShip Future
+      </button>
+      <h3 data-testid="answer">{relation}</h3>
+      <button
+        data-testid="clear"
+        onClick={() => {
+          setrelation("");
+        }}
+      >
+        {" "}
+        Clear
+      </button>
     </div>
   );
 }
