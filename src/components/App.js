@@ -7,24 +7,60 @@ function App() {
   const [relation, setrelation] = useState("");
   function clickHandeler(e) {
     // e.preventDefeault();
-    let lengt = value1.length + value2.length - 2;
-    if (lengt % 6 === 1) {
-      setrelation("Friends");
+    let ans = false;
+    for (let i = 0; i < value1.length; i++) {
+      for (let j = 0; j < value2.length; j++) {
+        if (value1[i] === value2[j]) {
+          ans = true;
+        }
+      }
     }
-    if (lengt % 6 === 2) {
-      setrelation("Love");
-    }
-    if (lengt % 6 === 3) {
-      setrelation("Affection");
-    }
-    if (lengt % 6 === 4) {
-      setrelation("Marriage");
-    }
-    if (lengt % 6 === 5) {
-      setrelation("Enemy");
-    }
-    if (lengt % 6 === 0) {
-      setrelation("Siblings");
+    if (ans === true) {
+      let lengt = value1.length + value2.length - 2;
+      if (lengt % 6 === 1) {
+        setrelation("Friends");
+      }
+      if (lengt % 6 === 2) {
+        setrelation("Love");
+      }
+      if (lengt % 6 === 3) {
+        setrelation("Affection");
+      }
+      if (lengt % 6 === 4) {
+        setrelation("Marriage");
+      }
+      if (lengt % 6 === 5) {
+        setrelation("Enemy");
+      }
+      if (lengt % 6 === 0) {
+        setrelation("Siblings");
+      }
+      if (value1.length === 0 || value2.length === 0) {
+        setrelation("Please Enter valid input");
+      }
+    } else {
+      let lengt = value1.length + value2.length;
+      if (lengt % 6 === 1) {
+        setrelation("Friends");
+      }
+      if (lengt % 6 === 2) {
+        setrelation("Love");
+      }
+      if (lengt % 6 === 3) {
+        setrelation("Affection");
+      }
+      if (lengt % 6 === 4) {
+        setrelation("Marriage");
+      }
+      if (lengt % 6 === 5) {
+        setrelation("Enemy");
+      }
+      if (lengt % 6 === 0) {
+        setrelation("Siblings");
+      }
+      if (value1.length === 0 || value2.length === 0) {
+        setrelation("Please Enter valid input");
+      }
     }
   }
   return (
