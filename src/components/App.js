@@ -38,15 +38,6 @@ function App() {
       if (value1.length === 0 || value2.length === 0) {
         setrelation("Please Enter valid input");
       }
-      if (value2 === "deepika") {
-        setrelation("Affection");
-      }
-      if (relation === "Friends" && value2 === "alia") {
-        setrelation("Enemy");
-      }
-      if (value1 === "karan" && value2 === "alia") {
-        setrelation("Siblings");
-      }
     } else {
       let lengt = value1.length + value2.length;
       if (lengt % 6 === 1) {
@@ -69,15 +60,6 @@ function App() {
       }
       if (value1.length === 0 || value2.length === 0) {
         setrelation("Please Enter valid input");
-      }
-      if (value2 === "deepika") {
-        setrelation("Affection");
-      }
-      if (relation === "Friends" && value2 === "alia") {
-        setrelation("Enemy");
-      }
-      if (value1 === "karan" && value2 === "alia") {
-        setrelation("Siblings");
       }
     }
   }
